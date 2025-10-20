@@ -1,0 +1,87 @@
+.cards-wrapper {
+  display: grid;
+  grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  padding: 20px 0 36px;
+  border-bottom: 1px solid #21212166;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card__subtitle-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__subtitle {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0%;
+  max-width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__image-wrapper {
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+}
+
+.card5 {
+  grid-area: card5;
+}
+
+.card6 {
+  grid-area: card6;
+}
+
+.card__like-btn {
+  width: 23px;
+  height: 20px;
+  opacity: 40%;
+  background-color: transparent;
+  border: none;
+}
+
+.card__like-btn:hover {
+  opacity: 100%;
+  transition: opacity 0.8s ease-out;
+  cursor: pointer;
+}
