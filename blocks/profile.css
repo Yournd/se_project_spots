@@ -62,7 +62,6 @@
 
 .profile__edit-btn {
   display: flex;
-  max-width: 110px;
   align-items: center;
   justify-self: center;
   gap: 8px;
