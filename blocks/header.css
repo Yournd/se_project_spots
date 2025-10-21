@@ -2,4 +2,10 @@
   width: 100%;
   text-align: center;
   background-color: #ffffffcc;
+  padding: 10px 0;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
 }
