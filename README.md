@@ -11,11 +11,11 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is called Spots, it is a social media website where people can post different hangout spots they enjoy and can interact with other hangout spots.
   
 **Goal**  
   
-The goal of this project is to provide a social media website, that can be accessed on all devices, that serves the purpose of connecting others online and spreading awareness about different advantageous hangout spots!
+The goal of this project is to provide a social media website that can be accessed on all devices, that serves the purpose of connecting others online and spreading awareness about different advantageous hangout spots!
   
 **Technologies and Techniques**  
   
@@ -41,5 +41,5 @@ Link~[link-to-deployment](https://yournd.github.io/se_project_spots/)
 
 **Link to Pitch**
 
-Link~[link-to-pitch](https://drive.google.com/file/d/1cjmBi4uh3GP8z0Otw-fiybt96rYdhPdG/view?usp=sharing)
+Link~[link-to-pitch](https://www.loom.com/share/ea9cbff0b9b149eaaf7f0de707baf016?sid=bc7bc172-ac65-4f24-99b3-aea376cc4f77)
 
