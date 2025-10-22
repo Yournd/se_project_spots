@@ -45,7 +45,7 @@
   font-size: 16px;
   line-height: 1.2;
   opacity: 40%;
-  margin: 0;
+  margin: 0 0 12px;
   padding: 0;
   display: -webkit-box;
   overflow: hidden;
@@ -138,23 +138,15 @@
   }
 
   .profile__header-title {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    margin: 0 0 6px;
     font-size: 20px;
     line-height: 1;
     text-align: center;
   }
 
   .profile__header-subtitle {
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 16px;
     line-height: 1;
     text-align: center;
-  }
-
-  .profile__header-wrapper {
-    gap: 6px;
   }
 
   .profile__new-post-btn-wrapper {
