@@ -11,3 +11,8 @@
   opacity: 40%;
   padding: 60px 0 60px;
 }
+
+.footer__text {
+  margin: 0;
+  padding: 0;
+}
