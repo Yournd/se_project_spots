@@ -41,5 +41,5 @@ Link~[link-to-deployment](https://yournd.github.io/se_project_spots/)
 
 **Link to Pitch**
 
-Link~[link-to-pitch](https://drive.google.com/file/d/1cjmBi4uh3GP8z0Otw-fiybt96rYdhPdG/view?usp=sharing)
+Link~[link-to-pitch]([https://drive.google.com/file/d/1cjmBi4uh3GP8z0Otw-fiybt96rYdhPdG/view?usp=sharing](https://www.loom.com/share/ea9cbff0b9b149eaaf7f0de707baf016?sid=bc7bc172-ac65-4f24-99b3-aea376cc4f77))
 
