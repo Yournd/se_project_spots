@@ -30,7 +30,7 @@
                 <h1 class="profile__header-title">Bessie Coleman</h1>
                 <p class="profile__header-subtitle">Civil Aviator</p>
               </div>
-              <button class="profile__edit-btn">
+              <button type="button" class="profile__edit-btn">
                 <img class="profile__edit-icon" src="./images/edit-icon.svg" alt="Edit Icon" />
                 Edit Profile
               </button>
@@ -42,8 +42,8 @@
           </button>
         </section>
         <section class="cards page__section">
-          <div class="cards__list">
-            <div class="card">
+          <ul class="cards__list">
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
@@ -54,8 +54,8 @@
                 <p class="card__subtitle">Val Thorens</p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
@@ -65,8 +65,8 @@
                 <p class="card__subtitle">Restaurant terrace</p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
@@ -76,8 +76,8 @@
                 <p class="card__subtitle">An outdoor cafe</p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
@@ -90,8 +90,8 @@
                 </p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
@@ -101,8 +101,8 @@
                 <p class="card__subtitle">Tunnel with morning light</p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <img
                 class="card__image"
                 src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
@@ -112,8 +112,8 @@
                 <p class="card__subtitle">Mountain house</p>
                 <div class="card__like-btn"></div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -123,7 +123,7 @@
         <div class="modal__container">
           <form class="modal__form">
             <h3 class="modal__title">Edit Profile</h3>
-            <div class="modal__close-btn"></div>
+            <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
             <fieldset class="modal__fieldset">
               <label for="name" class="modal__label">Name</label>
               <input type="text" id="name" name="name" class="modal__input" placeholder="Type your name" />
@@ -146,7 +146,7 @@
         <div class="modal__container">
           <form class="modal__form">
             <h3 class="modal__title">New Post</h3>
-            <div class="modal__close-btn"></div>
+            <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
             <fieldset class="modal__fieldset">
               <label for="image-link" class="modal__label">Image Link</label>
               <input

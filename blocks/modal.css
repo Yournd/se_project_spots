@@ -22,6 +22,7 @@
 
 .modal__container {
   position: relative;
+  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
   background-color: #fff;
@@ -84,6 +85,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
+  box-sizing: border-box;
   width: 100%;
   padding: 16px 12px;
   border-radius: 8px;
@@ -141,8 +143,6 @@
 
   .modal__input {
     font-size: 16px;
-    width: 90%;
-    padding: 16px 12px;
   }
 
   .modal__input::placeholder {
