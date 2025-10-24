@@ -37,8 +37,10 @@
   height: 40px;
   width: 40px;
   background-image: url(../images/close-icon.svg);
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
+  border: none;
   opacity: 40%;
 }
 
