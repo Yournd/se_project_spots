@@ -1,3 +1,30 @@
+const initialCards = [
+  {
+    name: "Val Thorens",
+    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+  {
+    name: "Restaurant terrace",
+    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
+  },
+  {
+    name: "An outdoor cafe",
+    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  },
+  {
+    name: "A very long bridge, over the forest",
+    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+  },
+  {
+    name: "Mountain house",
+    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+];
+
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileSaveBtn = editProfileModal.querySelector(".modal__save-btn");
@@ -59,4 +86,8 @@ newPostBtn.addEventListener("click", function () {
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));
+});
+
+initialCards.forEach(function (item) {
+  console.log(item.name);
 });
