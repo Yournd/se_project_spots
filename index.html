@@ -43,76 +43,17 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Tv screen showing snowy town"
-              />
-              <!-- Wrapper to group subtitle and like btn! -->
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">Val Thorens</p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Resutaurant terrace"
-              />
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">Restaurant terrace</p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe"
-              />
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">An outdoor cafe</p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="Long rope bridge over forest"
-              />
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">
-                  A very long bridge, over the forest Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse vitae velit at nibh scelerisque vulputate
-                </p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light"
-              />
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">Tunnel with morning light</p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house"
-              />
-              <div class="card__subtitle-wrapper">
-                <p class="card__subtitle">Mountain house</p>
-                <div class="card__like-btn"></div>
-              </div>
-            </li>
+            <template id="card__template">
+              <li class="card">
+                <img class="card__image" />
+                <div class="card__delete-btn"></div>
+                <!-- Wrapper to group subtitle and like btn! -->
+                <div class="card__subtitle-wrapper">
+                  <p class="card__subtitle"></p>
+                  <div class="card__like-btn"></div>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -169,6 +110,23 @@
             </fieldset>
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="modal__preview">
+        <div class="modal__preview-container">
+          <img
+            class="modal__image"
+            src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+            alt="Preview Image"
+          />
+          <button
+            type="button"
+            class="modal__close-btn modal__preview-close-btn"
+            aria-label="Close modal"
+          ></button>
+          <div class="modal__subtitle-container">
+            <p class="modal__subtitle"></p>
+          </div>
         </div>
       </div>
     </div>

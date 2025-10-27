@@ -1,27 +1,31 @@
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "../images/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
   {
     name: "Restaurant terrace",
-    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
+    link: "../images/2-photo-by-ceiline-from-pexels.jpg",
   },
   {
     name: "An outdoor cafe",
-    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    link: "../images/3-photo-by-tubanur-dogan-from-pexels.jpg",
   },
   {
     name: "A very long bridge, over the forest",
-    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
+    link: "../images/4-photo-by-maurice-laschet-from-pexels.jpg",
   },
   {
     name: "Tunnel with morning light",
-    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+    link: "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
   {
     name: "Mountain house",
-    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+  {
+    name: "Golden Gate Bridge",
+    link: "../images/pexels-griffin-wooldridge-4953434 1.png",
   },
 ];
 
@@ -45,6 +49,13 @@ const postCaptionInput = newPostModal.querySelector("#caption");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
 
+const cardTemplate = document.querySelector("#card__template");
+const cardList = document.querySelector(".cards__list");
+
+const previewModal = document.querySelector("#modal__preview");
+const previewImage = previewModal.querySelector(".modal__image");
+const previewSubtitle = previewModal.querySelector(".modal__subtitle");
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
   if (modal === editProfileModal) {
@@ -66,9 +77,46 @@ function handleEditFormSubmit(event) {
 
 function handlePostFormSubmit(event) {
   event.preventDefault();
-  console.log(postImgInput.value);
-  console.log(postCaptionInput.value);
+  const data = {
+    name: postCaptionInput.value,
+    link: postImgInput.value,
+  };
+  let card = getCardElement(data);
+  cardList.prepend(card);
   closeModal(newPostModal);
+}
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true).content;
+  const cardTitle = cardElement.querySelector(".card__subtitle");
+  const cardImg = cardElement.querySelector(".card__image");
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
+
+  cardImg.src = data.link;
+  cardImg.alt = data.name;
+  cardTitle.textContent = data.name;
+
+  cardLikeBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    cardLikeBtn.classList.toggle("card__like-btn");
+    cardLikeBtn.classList.toggle("card__like-btn_active");
+  });
+
+  cardDeleteBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    cardDeleteBtn.parentElement.remove();
+  });
+
+  cardImg.addEventListener("click", function (event) {
+    event.preventDefault();
+    previewSubtitle.textContent = data.name;
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    openModal(previewModal);
+  });
+
+  return cardElement;
 }
 
 newPostForm.addEventListener("submit", handlePostFormSubmit);
@@ -89,5 +137,6 @@ closeButtons.forEach((button) => {
 });
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
+  const cardEl = getCardElement(item);
+  cardList.prepend(cardEl);
 });
