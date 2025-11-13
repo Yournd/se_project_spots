@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-const allModals = document.querySelectorAll(".modal");
+const modals = document.querySelectorAll(".modal");
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
@@ -58,26 +58,26 @@ const previewModal = document.querySelector("#modal__preview");
 const previewImage = previewModal.querySelector(".modal__image");
 const previewSubtitle = previewModal.querySelector(".modal__subtitle");
 
-let currentModal = document.querySelector(".modal_is-opened");
-
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  allModals.forEach((modal) => {
-    function handleKeyPress(event) {
-      if (modal.classList.contains("modal_is-opened") && event.key == "Escape") {
-        closeModal(modal);
-        document.removeEventListener("keydown", handleKeyPress);
-      } else {
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyPress);
-  });
-
+  document.addEventListener("keydown", handleEscape);
   if (modal === editProfileModal) {
     profileNameInput.value = profileName.textContent;
     profileDescriptionInput.value = profileDescription.textContent;
   }
+}
+
+function handleEscape(event) {
+  modals.forEach((modal) => {
+    if (modal.classList.contains("modal")) {
+      const currentModal = modal;
+      if (event.key === "Escape") {
+        closeModal(currentModal);
+        document.removeEventListener("keydown", handleEscape);
+      }
+    } else {
+    }
+  });
 }
 
 function closeModal(modal) {
@@ -100,8 +100,8 @@ function handlePostFormSubmit(event) {
   let card = getCardElement(data);
   cardList.prepend(card);
   event.target.reset();
-  console.log(newPostSaveBtn);
-  disableButton(newPostSaveBtn, settings);
+  resetValidation(newPostForm, [postImgInput, postCaptionInput]);
+  disableButton(newPostSaveBtn, config);
   closeModal(newPostModal);
 }
 
@@ -148,7 +148,6 @@ editProfileBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  resetValidation(newPostForm, [postImgInput, postCaptionInput]);
   openModal(newPostModal);
 });
 
@@ -162,7 +161,7 @@ initialCards.forEach(function (item) {
   cardList.prepend(cardEl);
 });
 
-allModals.forEach((modal) => {
+modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (event.target.classList.contains("modal_is-opened")) {
       closeModal(modal);

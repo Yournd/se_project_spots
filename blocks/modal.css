@@ -195,6 +195,7 @@
 
 .modal__error {
   display: block;
+  visibility: visible;
   color: #ff0000b2;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;

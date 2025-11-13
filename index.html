@@ -45,7 +45,7 @@
           <ul class="cards__list">
             <template id="card__template">
               <li class="card">
-                <img class="card__image" />
+                <img class="card__image" alt="" />
                 <div class="card__delete-btn"></div>
                 <!-- Wrapper to group subtitle and like btn! -->
                 <div class="card__subtitle-wrapper">
@@ -80,7 +80,7 @@
                   maxlength="40"
                   required
                 />
-                <span class="modal__name-error modal__error"></span>
+                <span class="name-error modal__error"></span>
               </label>
             </fieldset>
             <fieldset class="modal__fieldset">
@@ -96,7 +96,7 @@
                   maxlength="200"
                   required
                 />
-                <span class="modal__description-error modal__error"></span>
+                <span class="description-error modal__error"></span>
               </label>
             </fieldset>
             <button type="submit" class="modal__save-btn">Save</button>
@@ -121,7 +121,7 @@
                   placeholder="Paste a link to the picture"
                   required
                 />
-                <span class="modal__image-link-error modal__error"></span>
+                <span class="image-link-error modal__error"></span>
               </label>
             </fieldset>
             <fieldset class="modal__fieldset">
@@ -137,7 +137,7 @@
                   maxlength="30"
                   required
                 />
-                <span class="modal__caption-error modal__error"></span>
+                <span class="caption-error modal__error"></span>
               </label>
             </fieldset>
             <button type="submit" id="modal__save-btn" class="modal__save-btn">Save</button>
