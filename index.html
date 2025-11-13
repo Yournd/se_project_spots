@@ -62,22 +62,42 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <form class="modal__form">
-            <h3 class="modal__title">Edit Profile</h3>
-            <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
+          <form class="modal__form" novalidate>
+            <div class="modal__header">
+              <h3 class="modal__title">Edit Profile</h3>
+              <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
+            </div>
             <fieldset class="modal__fieldset">
-              <label for="name" class="modal__label">Name</label>
-              <input type="text" id="name" name="name" class="modal__input" placeholder="Type your name" />
+              <label for="name" class="modal__label">
+                Name
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="modal__input"
+                  placeholder="Type your name"
+                  minlength="2"
+                  maxlength="40"
+                  required
+                />
+                <span class="modal__name-error modal__error"></span>
+              </label>
             </fieldset>
             <fieldset class="modal__fieldset">
-              <label for="description" class="modal__label">Description</label>
-              <input
-                type="text"
-                id="description"
-                name="description"
-                class="modal__input"
-                placeholder="Describe yourself"
-              />
+              <label for="description" class="modal__label">
+                Description
+                <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  class="modal__input"
+                  placeholder="Describe yourself"
+                  minlength="2"
+                  maxlength="200"
+                  required
+                />
+                <span class="modal__description-error modal__error"></span>
+              </label>
             </fieldset>
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
@@ -85,30 +105,42 @@
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <form class="modal__form">
-            <h3 class="modal__title">New Post</h3>
-            <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
+          <form class="modal__form" novalidate>
+            <div class="modal__header">
+              <h3 class="modal__title">New Post</h3>
+              <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
+            </div>
             <fieldset class="modal__fieldset">
-              <label for="image-link" class="modal__label">Image Link</label>
-              <input
-                type="url"
-                id="image-link"
-                name="image-link"
-                class="modal__input"
-                placeholder="Paste a link to the picture"
-              />
+              <label for="image-link" class="modal__label">
+                Image Link
+                <input
+                  type="url"
+                  id="image-link"
+                  name="image-link"
+                  class="modal__input"
+                  placeholder="Paste a link to the picture"
+                  required
+                />
+                <span class="modal__image-link-error modal__error"></span>
+              </label>
             </fieldset>
             <fieldset class="modal__fieldset">
-              <label for="caption" class="modal__label">Caption</label>
-              <input
-                type="text"
-                id="caption"
-                name="caption"
-                class="modal__input"
-                placeholder="Type your caption"
-              />
+              <label for="caption" class="modal__label">
+                Caption
+                <input
+                  type="text"
+                  id="caption"
+                  name="caption"
+                  class="modal__input"
+                  placeholder="Type your caption"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
+                <span class="modal__caption-error modal__error"></span>
+              </label>
             </fieldset>
-            <button type="submit" class="modal__save-btn">Save</button>
+            <button type="submit" id="modal__save-btn" class="modal__save-btn">Save</button>
           </form>
         </div>
       </div>
@@ -130,6 +162,7 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
