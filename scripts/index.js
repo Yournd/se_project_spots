@@ -73,15 +73,14 @@ function handleEscape(event) {
       const currentModal = modal;
       if (event.key === "Escape") {
         closeModal(currentModal);
-        document.removeEventListener("keydown", handleEscape);
       }
-    } else {
     }
   });
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function handleEditFormSubmit(event) {
@@ -165,7 +164,6 @@ modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (event.target.classList.contains("modal_is-opened")) {
       closeModal(modal);
-    } else {
     }
   });
 });
