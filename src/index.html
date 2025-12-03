@@ -10,7 +10,6 @@
       content="Social media website called Spots, where people can post any picture. They can also like other peoples pictures."
     />
     <title>Spots</title>
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="title" property="og:title" content="Spots" />
     <meta property="og:type" content="Website" />
@@ -25,13 +24,13 @@
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="Website Logo" />
+        <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Website Logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <!-- Wrapper to group image with profile heading! -->
           <div class="profile__wrapper">
-            <img class="profile__image" src="./images/avatar.jpg" alt="Woman smiling in black and white" />
+            <img class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Woman smiling in black and white" />
             <!-- Need Wrapper to group heading elements -->
             <div class="profile__header">
               <!-- Wrapper to seperate title & subtitle from edit btn! -->
@@ -40,13 +39,13 @@
                 <p class="profile__header-subtitle">Civil Aviator</p>
               </div>
               <button type="button" class="profile__edit-btn">
-                <img class="profile__edit-icon" src="./images/edit-icon.svg" alt="Edit Icon" />
+                <img class="profile__edit-icon" src="<%=require('./images/edit-icon.svg')%>" alt="Edit Icon" />
                 Edit Profile
               </button>
             </div>
           </div>
           <button class="profile__new-post-btn">
-            <img class="profile__plus-icon" src="./images/plus-icon.svg" alt="Plus Icon" />
+            <img class="profile__plus-icon" src="<%=require('./images/plus-icon.svg')%>" alt="Plus Icon" />
             New Post
           </button>
         </section>
@@ -157,7 +156,7 @@
         <div class="modal__preview-container">
           <img
             class="modal__image"
-            src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+            src="<%=require('./images/1-photo-by-moritz-feldmann-from-pexels.jpg')%>"
             alt="Preview Image"
           />
           <button
@@ -171,7 +170,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>

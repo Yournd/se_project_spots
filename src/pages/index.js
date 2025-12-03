@@ -1,31 +1,41 @@
+import { enableValidation, config, disableButton, resetValidation } from "../scripts/validation.js";
+import "./index.css";
+import image1 from "../images/1-photo-by-moritz-feldmann-from-pexels.jpg";
+import image2 from "../images/2-photo-by-ceiline-from-pexels.jpg";
+import image3 from "../images/3-photo-by-tubanur-dogan-from-pexels.jpg";
+import image4 from "../images/4-photo-by-maurice-laschet-from-pexels.jpg";
+import image5 from "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg";
+import image6 from "../images/6-photo-by-moritz-feldmann-from-pexels.jpg";
+import image7 from "../images/pexels-griffin-wooldridge-4953434 1.png";
+
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: image1,
   },
   {
     name: "Restaurant terrace",
-    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
+    link: image2,
   },
   {
     name: "An outdoor cafe",
-    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    link: image3,
   },
   {
     name: "A very long bridge, over the forest",
-    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
+    link: image4,
   },
   {
     name: "Tunnel with morning light",
-    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+    link: image5,
   },
   {
     name: "Mountain house",
-    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: image6,
   },
   {
     name: "Golden Gate Bridge",
-    link: "./images/pexels-griffin-wooldridge-4953434 1.png",
+    link: image7,
   },
 ];
 
@@ -167,3 +177,5 @@ modals.forEach((modal) => {
     }
   });
 });
+
+enableValidation(config);

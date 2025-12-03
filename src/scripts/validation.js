@@ -1,4 +1,4 @@
-const config = {
+export const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-btn",
@@ -33,13 +33,13 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const disableButton = (buttonEl, config) => {
+export const disableButton = (buttonEl, config) => {
   buttonEl.classList.add(config.inactiveButtonClass);
   buttonEl.classList.remove(config.submitButtonClass);
   buttonEl.disabled = true;
 };
 
-const resetValidation = (formEl, inputList) => {
+export const resetValidation = (formEl, inputList) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, config);
   });
@@ -69,12 +69,10 @@ const setEventListeners = (formEl, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
 
   formList.forEach((formEl) => {
     setEventListeners(formEl, config);
   });
 };
-
-enableValidation(config);
