@@ -30,7 +30,12 @@
         <section class="profile page__section">
           <!-- Wrapper to group image with profile heading! -->
           <div class="profile__wrapper">
-            <img class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Woman smiling in black and white" />
+            <div class="profile__avatar-wrapper">
+              <button type="button" class="profile__avatar-btn">
+                <img class="profile__edit-icon" src="<%=require('./images/edit-icon_white.png')%>" alt="Edit Icon" />
+              </button>  
+            <img class="profile__image" src="" alt="Avatar Image" />
+            </div>
             <!-- Need Wrapper to group heading elements -->
             <div class="profile__header">
               <!-- Wrapper to seperate title & subtitle from edit btn! -->
@@ -148,7 +153,7 @@
                 <span class="caption-error modal__error"></span>
               </label>
             </fieldset>
-            <button type="submit" id="modal__save-btn" class="modal__save-btn">Save</button>
+            <button type="submit" class="modal__save-btn">Save</button>
           </form>
         </div>
       </div>
@@ -168,6 +173,45 @@
             <p class="modal__subtitle"></p>
           </div>
         </div>
+      </div>
+       <div class="modal" id="avatar-modal">
+        <div class="modal__container">
+          <form class="modal__form" novalidate>
+            <div class="modal__header">
+              <h3 class="modal__title">Edit profile avatar</h3>
+              <button type="button" class="modal__close-btn" aria-label="Close modal"></button>
+            </div>
+            <fieldset class="modal__fieldset">
+              <label for="avatar-link" class="modal__label">
+                Profile Picture
+                <input
+                  type="url"
+                  id="avatar-link"
+                  name="avatar-link"
+                  class="modal__input"
+                  placeholder="Paste the link to an image"
+                  required
+                />
+                <span class="avatar-link-error modal__error"></span>
+              </label>
+            </fieldset>
+            <button type="submit" id="modal__save-btn" class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+       <div class="modal" id="delete-modal">
+         <div class="modal__container modal__delete-container">
+           <form class="modal__form" novalidate>
+             <div class="modal__header">
+               <h3 class="modal__title modal__delete-title">Are you sure you want to delete this image?</h3>
+              </div>
+              <div class="modal__btn-container">
+                <button type="submit" id="modal__delete-btn" class="modal__save-btn modal__delete">Delete</button>
+                <button type="button" id="modal__cancel-btn" class="modal__save-btn modal__cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+          <button type="button" class="modal__close-btn delete-close-btn" aria-label="Close modal"></button>
       </div>
     </div>
   </body>
