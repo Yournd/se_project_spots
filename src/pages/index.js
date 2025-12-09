@@ -95,19 +95,20 @@ function closeModal(modal) {
 function handleAvatarSubmit(event) {
   event.preventDefault();
   const saveBtn = event.submitter;
-  setLoadingText(saveBtn, true, "Saving...", "Save");
   api.editAvatarInfo({ avatar: avatarInput.value })
   .then((data) => {
     profileAvatar.src = data.avatar;
     closeModal(avatarModal);
     event.target.reset();
   }).catch(console.error)
+  .finally(() => {
+    setLoadingText(saveBtn, false, "Saving...", "Save");
+  });
 }
 
 function handleEditFormSubmit(event) {
   event.preventDefault();
   const saveBtn = event.submitter;
-  setLoadingText(saveBtn, true, "Saving...", "Save");
   api.editUserInfo({name: profileNameInput.value, about: profileDescriptionInput.value})
   .then((data) => {
     profileName.textContent = data.name;
@@ -115,12 +116,14 @@ function handleEditFormSubmit(event) {
     closeModal(editProfileModal);
   })
   .catch(console.error)
+  .finally(() => {
+    setLoadingText(saveBtn, false, "Saving...", "Save");
+  });
 }
 
 function handlePostFormSubmit(event) {
   event.preventDefault();
   const saveBtn = event.submitter;
-  setLoadingText(saveBtn, true, "Saving...", "Save");
   api.addCardInfo({name: postCaptionInput.value, link: postImgInput.value})
   .then((data) => {
     let card = getCardElement(data);
@@ -130,6 +133,9 @@ function handlePostFormSubmit(event) {
     disableButton(newPostSaveBtn, config);
     closeModal(newPostModal);
   }).catch(console.error)
+  .finally(() => {
+    setLoadingText(saveBtn, false, "Saving...", "Save"); 
+  });
 }
 
 function handleDeleteCard(cardElement, cardId) {
@@ -148,6 +154,9 @@ function handleDeleteSubmit(event) {
     closeModal(deleteModal);
   })
   .catch(console.error)
+  .finally(() => {
+    setLoadingText(saveBtn, true, "Deleting...", "Delete"); 
+  });
 }
 
 function handleLike(evt, id) {
