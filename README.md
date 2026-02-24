@@ -37,7 +37,7 @@ Below is a collection of screenshots presenting (in order) the responive layouts
 
 **Link to Deployment**
 
-Link~[link-to-deployment](https://yournd.github.io/se_project_spots/)
+Link~[https://wyattyousey.github.io/se_project_tetris_game/](https://wyattyousey.github.io/se_project_tetris_game/)
 
 **Link to Pitch**
 
